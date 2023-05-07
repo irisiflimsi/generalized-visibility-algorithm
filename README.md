@@ -30,6 +30,7 @@ If $q^E$ or $q^I$ are the case, the beginning of the line must have a smaller an
 
 $$c_i, p_i^{CW}$$
 
+Rotate around the point until the next point $q$ (all $p^k_j$ and $c_k$ being sorted accordingly). If we have reached a $c_k$, add $(c_i, c_k, p_i)$ to $V(C)$ and continue with $c_{i+1} = c_k, p_{i+1}^{CW} = p_i$; we are still in position 2. Otherwise, we have $q=p_k$.
 ## Position 3
 
 $$c_i, p_i^{CCW}$$
