@@ -4,4 +4,6 @@ Some games consider visibility not just from a point source, which is the usual 
 
 # Formulation
 
-Let $({c\_i})\_{i=0..n}$ be a convex polygon $C$, the _center_. Let $({l\_i})\_{i=0..m}$ be a list of lines called _obstacles_, where $l\_i=(o^0\_i, o^1\_i)$ for $i=0..m$. (This notation identifies the whole line, not just the end points.) Find the polygon that bounds the visibility region $V(C)$, i.e. the set $\bigcup{(c\_i, x):(c\_i,x)\cap({l\_j})\_{j=0..m}=\emptyset}$.
+Let $({c\_i})\_{i=0..n}$ be a convex polygon $C$, the _center_. Let $({l\_i})\_{i=0..m}$ be a list of lines called _obstacles_, where $l\_i=(o^0\_i, o^1\_i)$ for $i=0..m$. (This notation identifies the whole line, not just the end points.) Find the boundary of the visibility region $V(C)$, i.e. the set $\bigcup\lbrace(c\_i, x):(c\_i,x)\cap({l\_j})\_{j=0..m}=\emptyset, i=0..n, x\in\mathbb{R}^2\rbrace$.
+
+We make a further assumption that the $V(C)$ is bounded, i.e. the boundary will be a polygon. We also assume that the obstacles contain their intersections as points, i.e. we do not need to find these first: $l\_i\cap l\_j\subset\bigcup\lbrace(o^0_k,o^1_k : k=0..m)\rbrace$ for $i,j=0..m, i\neq j$.
