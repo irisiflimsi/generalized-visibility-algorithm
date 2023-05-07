@@ -10,16 +10,18 @@ We make a further assumption that the $V(C)$ is bounded, i.e. the boundary will 
 
 # Algorithm
 
-We will unite all triangle we find in the following manner. Start with a point on the (boundary of the) center, called $c_0$ with angle $0$ that intersects the obstacles at $p_0$, where $p_0$ is closest to $c_0$.
+We will unite all triangle we find in the following manner. Start with a point on the (boundary of the) center, called $c_0$ with smallest angle $0$ that intersects the obstacles at obstacle point $p_0$, where $p_0$ is closest to $c_0$. We start by rotating counterclockwise at that point, denoting it $c_0^{CCW}$.
+
+$i$ will be the step counter and $c_i$ will always denote (boundary) center points and $p_i$ will be the closest obstacle point. $c_i$ does not need to be a $C^E\_j$, nor does $p_i$ need to be an $o^k_j$.
 
 ## Position 1
 
+$c_i^{CCW}$, $p_i$
+
 ## Position 2
+
+$c_i$, $p_i^{CW}$
 
 ## Position 3
 
-## Position 4
-
-## Position 5
-
-## Position 6
+$c_i$, $p_i^{CCW}$
