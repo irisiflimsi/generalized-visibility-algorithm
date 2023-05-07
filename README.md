@@ -24,13 +24,16 @@ Rotate around the point to the next point $q' \ne p_i$ (all $p^k_j$ being sorted
 
 If $q^B$ is the case, find the closest line $l$ to $c_i$ that has _end_ with at least the angle of $q^B$. That line must exist, because the whole obstacle set bounds the area. It can't have $q^B$ as part, because $q$ was the next point and because of the precondition of the last statement of the last paragraph. This line must also intersect the ray from $c_i$ through $p_i$ because $q$ was the next point, so one end of $l$ must have a smaller angle. Take $l_q$ to be the intersection of the ray $c_i$ through $q$ and $l_p$ the intersection of the ray from $c_i$ through $p_i$. Add area $(c_i, l_q, l_p)$ to $V(C)$. Choose $p_{i+1}^{CW} = q^B$ and $c_{i+1} = c_i$. We are in position 2.
 
-If $q^E$ or $q^I$ are the case, the beginning of the line must have a smaller angle than $p_i$, because $q$ was the next point. Let $l_p$ be the intersection of the ray from $c_i$ through $p_i$. (Probably $l_p$ has a greater distnce from $c_i$ than $p_i$, but I am to lazy to prove that.) Add area $(c_i, q, l_p)$ to $V(C)$. Choose $c_{i+1}^{CCW}=c_i$, $p_{i+1}=q$, we are in position 1.
+If $q^E$ or $q^I$ are the case, the beginning of the line must have a smaller angle than $p_i$, because $q$ was the next point. Let $l_p$ be the intersection of the ray from $c_i$ through $p_i$. (Probably $l_p$ has a greater distance from $c_i$ than $p_i$, but I am to lazy to prove that.) Add area $(c_i, q, l_p)$ to $V(C)$. Choose $c_{i+1}^{CCW}=c_i$, $p_{i+1}=q$, we are in position 1.
 
 ## Position 2
 
 $$c_i, p_i^{CW}$$
 
-Rotate around the point until the next point $q$ (all $p^k_j$ and $c_k$ being sorted accordingly). If we have reached a $c_k$, add $(c_i, c_k, p_i)$ to $V(C)$ and continue with $c_{i+1} = c_k, p_{i+1}^{CW} = p_i$; we are still in position 2. Otherwise, we have $q=p_k$.
+Rotate around the point until the next point $q$ (all $p^k_j$ and $c_k$ being sorted accordingly). If we have reached a $c_k$, add $(c_i, c_k, p_i)$ to $V(C)$ and continue with $c_{i+1} = c_k, p_{i+1}^{CW} = p_i$; we are still in position 2. Otherwise, If $q$ is on the same line as $p_i$, add area $(c_i, p_i, q)$ to $V(C)$. Let $p_{i+1}^{CW} = q$. We are again in position 2. If $q$ is on a different line, it can either be a beginning $q^B$, meaning that the other end of the line has a greater angle with respect to $c_i$ rotation or an end $q^E$, meaning the angle of the other point is smaller. If both are the case, choose $q$ as $q^E$. We may also have the case that $q$ is neither : $q^I$. We have also have two cases each, when the ray $c_i$ to $q$ intersects $C$; or not. In the former case, let $c_k$ be the closest point to $p_i$.
+
+If $q_E$ is an end point and we have an intersection $c_k$, add $(c_i, c_k, p_i)$ to $V(C)$ and set $c_{i+1}=c_k, p_{i+1}
+
 ## Position 3
 
 $$c_i, p_i^{CCW}$$
