@@ -30,8 +30,15 @@ If $q^E$ or $q^I$ are the case, the beginning of the line must have a smaller an
 
 $$c_i, p_i^{CW}$$
 
-Rotate around the point until the next point $q$ (all $p^k_j$ and $c_k$ being sorted accordingly). We rotate the ray in both directions and need to take the "next" point accordingly.  We have to distinguish several cases. If we have reached a $c_k$, add $(c_i, c_k, p_i)$ to $V(C)$ and continue with $c_{i+1} = c_k, p_{i+1}^{CW} = p_i$; we are still in position 2. Otherwise, If $q$ is on the same line as $p_i$, add area $(c_i, p_i, q)$ to $V(C)$. Let $p_{i+1}^{CW} = q$. We are again in position 2. If $q$ is on a different line, it can either be a beginning $q^B$, meaning that the other end of the line has a greater angle with respect to $c_i$ rotation or an end $q^E$, meaning the angle of the other point is smaller. If both are the case, choose $q$ as $q^E$. We may also have the case that $q$ is neither : $q^I$. We have also have two cases each, when the ray $c_i$ to $q$ intersects $C$; or not. In the former case, let $c_k$ be the closest point to $p_i$.
+Rotate around the point until the next point $q$ (all $p^k_j$ and $c_k$ being sorted accordingly). We rotate the ray in both directions and need to take the "next" point accordingly.  We have to distinguish several cases.
 
+ * If we have reached a $c_k$, add $(c_i, c_k, p_i)$ to $V(C)$. Following the ray from $p_i$ in the other direction, we encounter another line, of which $p_i$ cannot be part. Since we encountered $c_k$ first, there are points $p^i_k$ along ray $(c_i, p_k)$ and $p^k_k$ along ray $(c_k, p_k)$. We add $c_i, c_k, $p^k_k)$ to $V(C)$ and continue with $c_{i+1} = c_k, p_{i+1}^{CW} = p_i$; we are still in position 2.
+
+ * If $q' \ne p_i$, pick the closest point $q$ to $c_i$ on the ray from $c_i$ through $q'$ on any of the obstacles. If $q$ is on the same line as $p_i$, add area $(c_i, p_i, q)$ to $V(C)$. Let $p_{i+1}^{CW} = q$. We are again in position 2.
+
+ * If $q$ is on a different line, it can either be a beginning $q^B$, meaning that the other end of the line has a greater angle with respect to $p_i$ rotation or an end $q^E$, meaning the angle of the other point is smaller. If both are the case, choose $q$ as $q^E$. We may also have the case that $q$ is neither : $q^I$.
+
+We have also have two cases each, when the ray $c_i$ to $q$ intersects $C$; or not. In the former case, let $c_k$ be the closest point to $p_i$.
 If $q_E$ is an end point and we have an intersection $c_k$, add $(c_i, c_k, p_i)$ to $V(C)$ and set $c_{i+1}=c_k, p_{i+1}
 
 ## Position 3
