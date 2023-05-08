@@ -20,11 +20,11 @@ Generally speaking, we will rotate clockwise ($-$) around obstacle points until 
 
 More formally, assume we are at $c_i$ and $p_i$. Assume all $p_k$ and $c^E_k$ points are ordered according to a rotation around $p_i$ starting with the axis through $c_i$. This is asymmetrical ordering, i.e. only angles in $\[0,\pi)$ are considered. We can also ignore all $p_k$, where $(p_k,$p_i\]\cap C\ne\emptyset$ and all $c_k$ where $(c_k,$p_i\]\cap C\ne\emptyset$ . We call this the $p_i$-ordering. We do the same with rotations around $c_i$, which we call the $c_i$-ordering. When at this position, we distinguish the following cases:
 
-### $p_i$ is a line segment endpoint $p^0_k$ or $p^1_k$ and the other end has negative angle
+### $p_i$ is a line segment endpoint $p^0_k$ or $p^1_k$ and the other endpoint has negative angle in $c_i$-ordering
 
-### $p_i$ is a line segment endpoint $p^0_k$ or $p^1_k$ and the other end has positive angle
+### $p_i$ is a line segment endpoint $p^0_k$ or $p^1_k$ and the other endpoint has positive angle in $c_i$-ordering
 
-### $p_i$ is a line segment endpoint $p^0_k$ or $p^1_k$ and the other end has zero angle
+### $p_i$ is a line segment endpoint $p^0_k$ or $p^1_k$ and the other end has zero angle in $c_i$-ordering
 
 ### $p_i$ is not a line segment endpoint $p^0_k$ or $p^1_k$
 
