@@ -18,13 +18,15 @@ $i$ will be the step counter and $c_i$ will always denote (boundary) center poin
 
 Generally speaking, we will rotate clockwise ($-$) around obstacle points until we are blocked by an obstacle or the "end" of $C$. We will then routate counter-clockwise ($+$) from that block or "end" until we hit a block or the other "end". We are then in the position of the outset, but we have moved overall to the left, i.e. counter-clockwise. We will have scanned the visible opening completely.
 
-More formally, assume we are at $c_i$ and $p_i$. Assume all $p_k$ and $c^E_k$ points are ordered according to a rotation around $p_i$ starting with the axis through $c_i$. This is asymmetrical ordering, i.e. only angles in $\[0,\pi)$ are considered. We can also ignore all $p_k$, where $(p_k,$p_i\]\cap C\ne\emptyset$ and all $c_k$ where $(c_k,$p_i\]\cap C\ne\emptyset$ . We call this the $p_i$-ordering. We do the same with rotations around $c_i$, which we call the $c_i$-ordering. When at this position, we distinguish the following cases:
+More formally, assume we are at $c_i$ and $p_i$. $p_i$ is the closest obstacle point along the ray $\[c_i, p_i\]$. Assume all $p_k$ and $c^E_k$ points are ordered according to a rotation around $p_i$ starting with the axis through $c_i$. This is asymmetrical ordering, i.e. only angles in $\[0,\pi)$ are considered. We can also ignore all $p_k$, where $(p_k,$p_i\]\cap C\ne\emptyset$ and all $c_k$ where $(c_k,$p_i\]\cap C\ne\emptyset$ . We call this the $p_i$-ordering. We do the same with rotations around $c_i$, which we call the $c_i$-ordering. When at this position, we distinguish the following cases:
 
-### $p_i$ is a line segment endpoint $p^0_k$ or $p^1_k$ and the other endpoint has negative angle in $c_i$-ordering
+### $p_i$ is a line segment endpoint $p^0_k$ or $p^1_k$ and all other endpoints of such lines have maximum angle less than 0 in $c_i$-ordering
 
-### $p_i$ is a line segment endpoint $p^0_k$ or $p^1_k$ and the other endpoint has positive angle in $c_i$-ordering
+Call the maximum angle $\alpha$. We $-$-rotate around $p_i$, until we hit an obstace point $p_k$ or a center vertex $c^E_k$, whichever we encounter first. We will have rotated at most $\alpha$.
 
-### $p_i$ is a line segment endpoint $p^0_k$ or $p^1_k$ and the other end has zero angle in $c_i$-ordering
+### $p_i$ is a line segment endpoint $p^0_k$ or $p^1_k$ and the maximum angle of all other endpoints of such lines is 0 in $c_i$-ordering
+
+### $p_i$ is a line segment endpoint $p^0_k$ or $p^1_k$ and at least one other endpoint has positive angle in $c_i$-ordering
 
 ### $p_i$ is not a line segment endpoint $p^0_k$ or $p^1_k$
 
