@@ -20,9 +20,11 @@ Generally speaking, we will rotate clockwise ($-$) around obstacle points until 
 
 More formally, assume we are at $c_i$ and $p_i$. $p_i$ is the closest obstacle point along the ray $\[c_i, p_i\]$. Assume all $p_k$ and $c^E_k$ points are ordered according to a rotation around $p_i$ starting with the axis through $c_i$. This is asymmetrical ordering, i.e. only angles in $\[0,\pi)$ are considered. We can also ignore all $p_k$, where $(p_k,$p_i\]\cap C\ne\emptyset$ and all $c_k$ where $(c_k,$p_i\]\cap C\ne\emptyset$ . We call this the $p_i$-ordering. We do the same with rotations around $c_i$, which we call the $c_i$-ordering. When at this position, we distinguish the following cases:
 
-### $p_i$ is a line segment endpoint $p^0_k$ or $p^1_k$ and all other endpoints of such lines have maximum angle less than 0 in $c_i$-ordering
+### $p_i$ is a line segment endpoint $p^0_k$ or $p^1_k$ and all other endpoints of such lines have maximum angle less than 0 in $c_i$-ordering. There is a $c^E_k$ with negative angle in $p_i$ ordering.
 
-Call the maximum angle $\alpha$. We $-$-rotate around $p_i$, until we hit an obstace point $p_k$ or a center vertex $c^E_k$, whichever we encounter first. We will have rotated at most $\alpha$.
+Call the maximum angle $\alpha$. We ($-$)-rotate around $p_i$, until we hit an obstacle vertex $p_k$ or a center vertex $c^E_k$, whichever we encounter first. We will have rotated at most $\alpha$. If we reached an obstacle vertex, we take the obstacle point $p$ 
+
+### $p_i$ is a line segment endpoint $p^0_k$ or $p^1_k$ and all other endpoints of such lines have maximum angle less than 0 in $c_i$-ordering. There is no $c^E_k$ with negative angle in $p_i$ ordering.
 
 ### $p_i$ is a line segment endpoint $p^0_k$ or $p^1_k$ and the maximum angle of all other endpoints of such lines is 0 in $c_i$-ordering
 
