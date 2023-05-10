@@ -22,7 +22,11 @@ More formally, assume we are at $c_i$ and $p_i$. $p_i$ is the closest obstacle p
 
 ### $p_i$ is a line segment endpoint $p^0_k$ or $p^1_k$ and all other endpoints of such lines have maximum angle less than 0 in $c_i$-ordering. There is a $c^E_k$ with negative angle in $p_i$ ordering.
 
-Call the maximum angle $\alpha$. We ($-$)-rotate around $p_i$, until we hit an obstacle vertex $p_k$ or a center vertex $c^E_k$, whichever we encounter first. We will have rotated at most $\alpha$. If we reached an obstacle vertex, we take the closest center point $c_{i+1}$ that lies on the line through $(p_i,p_k)$. We add $\[c_{i+1}, c_i, p_i\]$ to $V(C)$. We also take the points $q_i$ and $q_{i+1}$, which are the closest obstacle points on $(c_i,p_i)$ beyond $p_i$ and $(c_{i+1},p_i)$ beyond $p_i$, respectively. We then add $\[p_i,q_i,q_{i+1}\]$. Note that $q_i$ and $q_{i+1}$ must be on the same line segment,  (not true!) because we have not encountered any other segment end during rotation.
+Call the maximum angle $\alpha$. We ($-$)-rotate around $p_i$, until we hit an obstacle vertex $p_k$ or a center vertex $c^E_k$, whichever we encounter first. We will have rotated at most $\alpha$. If we reached an obstacle vertex, we take the closest center point $c_{i+1}$ that lies on the line through $(p_i,p_k)$, otherwise we take $c_{i+1}=c^E_k$, which we encountered directly. We add the triangle $\[c_{i+1}, c_i, p_i\]$ to $V(C)$. It is easy to see that no obstacles can be in it.
+
+We take the point $q_i$, which is the closest obstacle along $(c_i,p_i)$ with a positive angle. This point need not be a $c^E$. We also take the point $q_{i+1}$, which is the closest obstacle along $(c_{i+1},p_i)$ with a negative angle. Note that $q_i$ and $q_{i+1}$ must be on the same line segment, because we have not encountered any other segment end during rotation. We then add $\[p_i,q_i,q_{i+1}\]$.
+
+We already know $c_{i+1}$. As $p_{i+1}$ take the closest obstacle point to $c_{i+1}$ along the ray $(c_{i+1}, p_k)$.
 
 ### $p_i$ is a line segment endpoint $p^0_k$ or $p^1_k$ and all other endpoints of such lines have maximum angle less than 0 in $c_i$-ordering. There is no $c^E_k$ with negative angle in $p_i$ ordering.
 
