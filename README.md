@@ -18,25 +18,33 @@ $i$ will be the step counter and $c_i$ will always denote (boundary) center poin
 
 Generally speaking, we will rotate clockwise ($-$) around obstacle points until we are blocked by an obstacle or the "end" of $C$. We will then routate counter-clockwise ($+$) from that block or "end" until we hit a block or the other "end". We are then in the position of the outset, but we have moved overall to the left, i.e. counter-clockwise. We will have scanned the visible opening completely.
 
-More formally, assume we are at $c_i$ and $p_i$. $p_i$ is the closest obstacle point along the ray $\[c_i, p_i\]$. Assume all $p_k$ and $c^E_k$ points are ordered according to a rotation around $p_i$ starting with the axis through $c_i$. This is asymmetrical ordering, i.e. only angles in $\[0,\pi)$ are considered. We can also ignore all $p_k$, where $(p_k,$p_i\]\cap C\ne\emptyset$ and all $c_k$ where $(c_k,$p_i\]\cap C\ne\emptyset$ . We call this the $p_i$-ordering. We do the same with rotations around $c_i$, which we call the $c_i$-ordering. When at this position, we distinguish the following cases:
+More formally, assume we are at $c_i$ and $p_i$. $p_i$ is the closest obstacle point along the ray $\[c_i, p_i\]$. Assume all $p_k$ and $c^E_k$ points are ordered according to a rotation around $p_i$ starting with the axis through $c_i$. This is asymmetrical ordering, i.e. only angles in $\[0,\pi)$ are considered. We can also ignore all $p_k$, where $(p_k,$p_i\]\cap C\ne\emptyset$ and all $c_k$ where $(c_k,$p_i\]\cap C\ne\emptyset$ . We call this the $p_i$-ordering. We do the same with rotations around $c_i$, which we call the $c_i$-ordering.
 
-### $p_i$ is a line segment endpoint $p^0_k$ or $p^1_k$ and all other endpoints of such lines have maximum angle less than 0 in $c_i$-ordering. There is a $c^E_k$ with negative angle in $p_i$ ordering.
+The "line of sight", which will pass through the points $c_i$ and $p_i$ will either be considered _left_ or _right_ of $p_i$, if $p_i$ is an endpoint. This will determine where we will rotate in the visible region. When at this position, we distinguish the following cases:
+
+### We are left. $p_i$ is a line segment endpoint $p^0_k$ or $p^1_k$ and all other endpoints of such lines have maximum angle less than 0 in $c_i$-ordering. There is a $c^E_k$ with negative angle in $p_i$ ordering.
 
 Call the maximum angle $\alpha$. We ($-$)-rotate around $p_i$, until we hit an obstacle vertex $p_k$ or a center vertex $c^E_k$, whichever we encounter first. We will have rotated at most $\alpha$. If we reached an obstacle vertex, we take the closest center point $c_{i+1}$ that lies on the line through $(p_i,p_k)$, otherwise we take $c_{i+1}=c^E_k$, which we encountered directly. We add the triangle $\[c_{i+1}, c_i, p_i\]$ to $V(C)$. It is easy to see that no obstacles can be in it.
 
-We take the point $q_i$, which is the closest obstacle along $(c_i,p_i)$ with a positive angle. This point need not be a $p^E$. We also take the point $q_{i+1}$, which is the closest obstacle along $(c_{i+1},p_i)$ with a negative angle. Note that $q_i$ and $q_{i+1}$ must be on a same line segment, because we have not encountered any other segment end during rotation. (Other line segements m start from these points, though.) We then add $\[p_i,q_i,q_{i+1}\]$.
+We take the point $q_i$, which is the closest obstacle along $(c_i,p_i)$ with a positive angle. This point need not be a $p^E$. We also take the point $q_{i+1}$, which is the closest obstacle along $(c_{i+1},p_i)$ with a negative angle. Note that $q_i$ and $q_{i+1}$ must be on a same line segment, because we have not encountered any other segment end during rotation. (Other line segements m start from these points, though.) We then add $\[p_i,q_i,q_{i+1}\]$ to $V(C)$.
 
 We already know $c_{i+1}$. As $p_{i+1}$ take the closest obstacle point to $c_{i+1}$ along the ray $(c_{i+1}, p_k)$.
 
-### $p_i$ is a line segment endpoint $p^0_k$ or $p^1_k$ and all other endpoints of such lines have maximum angle less than 0 in $c_i$-ordering. There is no $c^E_k$ with negative angle in $p_i$ ordering.
+### We are left. $p_i$ is a line segment endpoint $p^0_k$ or $p^1_k$ and all other endpoints of such lines have maximum angle less than 0 in $c_i$-ordering. There is no $c^E_k$ with negative angle in $p_i$ ordering.
 
-We ($+$)-rotate around $c_i$, until we hit an obstacle vertex $p_k$ or a center vertex $c^E_k$, whichever we encounter first, call it $q$. We take the point $q_i$, which is the closest obstacle along $(c_i,p_i)$ with a positive angle. This point need not be a $p^E$. We also take the point $q_{i+1}$, which is the closest obstacle along $(c_i,q)$ with a negative angle. Note that $q_i$ and $q_{i+1}$ must be on a same line segment, because we have not encountered any other segment end during rotation. (Other line segements m start from these points, though.) We then add $\[c_i,q_i,q_{i+1}\]$.
+We ($+$)-rotate around $c_i$, until we hit an obstacle vertex $p_k$ or a center vertex $c^E_k$, whichever we encounter first, call it $q$. We take the point $q_i$, which is the closest obstacle along $(c_i,p_i)$ with a positive angle. This point need not be a $p^E$. We also take the point $q_{i+1}$, which is the closest obstacle along $(c_i,q)$ with a negative angle. Note that $q_i$ and $q_{i+1}$ must be on a same line segment, because we have not encountered any other segment end during rotation. (Other line segements m start from these points, though.) We then add $\[c_i,q_i,q_{i+1}\]$ to $V(C)$.
 
 If $q$ is a $c^E$, let $c_{i+1}=q$ and $p_{i+1}=p_i$. If $q$ is an obstacle vertex, take $c_{i+1}=c_i$ and pick $p_{i+1}$ to be the closest obstacle point on the ray $(c_i,q)$.
 
-### $p_i$ is a line segment endpoint $p^0_k$ or $p^1_k$ and the maximum angle of all other endpoints of such lines is 0 in $c_i$-ordering
+### We are left. $p_i$ is a line segment endpoint $p^0_k$ or $p^1_k$ and the maximum angle of all other endpoints of such lines is 0 in $c_i$-ordering.
 
-### $p_i$ is a line segment endpoint $p^0_k$ or $p^1_k$ and at least one other endpoint has positive angle in $c_i$-ordering
+Take $c_{i+1}=c_i$ and $p_{i+1}$ the next closest $p^0_k$ or $p^1_k$ to $c_i$ on the ray $(c_i,p_i)$ that has a non-zero angle. Nothing is added to $V(C)$.
 
-### $p_i$ is not a line segment endpoint $p^0_k$ or $p^1_k$
+### We are left. $p_i$ is a line segment endpoint $p^0_k$ or $p^1_k$ and at least one other endpoint has positive angle in $c_i$-ordering.
+
+Assume that all other endpoints have positive angle, Call the minimum angle $\alpha$. We ($+$)-rotate around $p_i$, until we hit an obstacle vertex $p_k$ or a center vertex $c^E_k$, whichever we encounter first. We will have rotated at most $\alpha$. If we reached an obstacle vertex, we take the closest center point $c_{i+1}$ that lies on the line through $(p_i,p_k)$, otherwise we take $c_{i+1}=c^E_k$, which we encountered directly. We add the triangle $\[c_{i+1}, c_i, p_i\]$ to $V(C)$. It is easy to see that no obstacles can be in it.
+
+If there are endpoints with 0 angle, pick $c_{i+1}=c_i$ and $p_{i+1}$ the next closest $p^0_k$ or $p^1_k$ to $c_i$ on the ray $(c_i,p_i)$ that has a non-zero angle. Nothing is added to $V(C)$.
+
+### $p_i$ is not a line segment endpoint $p^0_k$ or $p^1_k$.
 
