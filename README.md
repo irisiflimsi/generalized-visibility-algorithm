@@ -24,11 +24,15 @@ More formally, assume we are at $c_i$ and $p_i$. $p_i$ is the closest obstacle p
 
 Call the maximum angle $\alpha$. We ($-$)-rotate around $p_i$, until we hit an obstacle vertex $p_k$ or a center vertex $c^E_k$, whichever we encounter first. We will have rotated at most $\alpha$. If we reached an obstacle vertex, we take the closest center point $c_{i+1}$ that lies on the line through $(p_i,p_k)$, otherwise we take $c_{i+1}=c^E_k$, which we encountered directly. We add the triangle $\[c_{i+1}, c_i, p_i\]$ to $V(C)$. It is easy to see that no obstacles can be in it.
 
-We take the point $q_i$, which is the closest obstacle along $(c_i,p_i)$ with a positive angle. This point need not be a $c^E$. We also take the point $q_{i+1}$, which is the closest obstacle along $(c_{i+1},p_i)$ with a negative angle. Note that $q_i$ and $q_{i+1}$ must be on the same line segment, because we have not encountered any other segment end during rotation. We then add $\[p_i,q_i,q_{i+1}\]$.
+We take the point $q_i$, which is the closest obstacle along $(c_i,p_i)$ with a positive angle. This point need not be a $p^E$. We also take the point $q_{i+1}$, which is the closest obstacle along $(c_{i+1},p_i)$ with a negative angle. Note that $q_i$ and $q_{i+1}$ must be on a same line segment, because we have not encountered any other segment end during rotation. (Other line segements m start from these points, though.) We then add $\[p_i,q_i,q_{i+1}\]$.
 
 We already know $c_{i+1}$. As $p_{i+1}$ take the closest obstacle point to $c_{i+1}$ along the ray $(c_{i+1}, p_k)$.
 
 ### $p_i$ is a line segment endpoint $p^0_k$ or $p^1_k$ and all other endpoints of such lines have maximum angle less than 0 in $c_i$-ordering. There is no $c^E_k$ with negative angle in $p_i$ ordering.
+
+We ($+$)-rotate around $c_i$, until we hit an obstacle vertex $p_k$ or a center vertex $c^E_k$, whichever we encounter first, call it $q$. We take the point $q_i$, which is the closest obstacle along $(c_i,p_i)$ with a positive angle. This point need not be a $p^E$. We also take the point $q_{i+1}$, which is the closest obstacle along $(c_i,q)$ with a negative angle. Note that $q_i$ and $q_{i+1}$ must be on a same line segment, because we have not encountered any other segment end during rotation. (Other line segements m start from these points, though.) We then add $\[c_i,q_i,q_{i+1}\]$.
+
+If $q$ is a $c^E$, let $c_{i+1}=q$ and $p_{i+1}=p_i$. If $q$ is an obstacle vertex, take $c_{i+1}=c_i$ and pick $p_{i+1}$ to be the closest obstacle point on the ray $(c_i,q)$.
 
 ### $p_i$ is a line segment endpoint $p^0_k$ or $p^1_k$ and the maximum angle of all other endpoints of such lines is 0 in $c_i$-ordering
 
