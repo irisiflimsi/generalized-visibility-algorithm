@@ -84,6 +84,6 @@ Thus, we will eventually rotate around $C$ and again, since there are only a fin
 
 ## Entirety
 
-Take any point $q\in V(C)$ and take a line-of-sight to $c$ on a boundary segment $(c^E_0,c^E_1)$. By definition, there is no obstacle $p$ on the line-of-sight, so we rotate $c$ in $CCW$ direction, until we either hit a outer left vertex $c^E_k$ of $C$ or some $p_k$ in $P$, which then has no other endpoint to the right. If we don't have $p_k$ with this non-right property yet, rotate around $c$ in $CW$ until we do.
+Take any point $q\in V(C)$ and take a line-of-sight to $c$ on a boundary segment $(c^E_0,c^E_1)$. By definition, there is no obstacle $p$ on the line-of-sight, so we rotate $c$ in $CCW$ direction, until we either hit an outer left vertex $c^E_k$ of $C$ or some $p_k$ in $P$, which then has no other endpoint to the right. If we don't have $p_k$ with this non-right property yet, rotate around $c$ in $CW$ until we do.
 
-By nature of the algorithm, we will touch all obstacle points as we go around $C$. Not all obstacle points will be rotation points (or a $q$ for triangle completion). Assume that $p_k$ is a rotation point in the algorithm. Otherwise assume $p_k$ is not a rotation point.
+By nature of the algorithm, we will touch all obstacle points as we go around $C$. Not all obstacle points will be rotation points (or a $q$ for triangle completion). Assume that $p_k$ was not visible by the algorithm, i.e. we have some $c_i$ and $p_i$, where $p_k$ is on the ray $(c_i,p_i)$ beyond $p_i$. 
