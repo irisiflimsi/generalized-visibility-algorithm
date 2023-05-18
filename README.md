@@ -14,7 +14,7 @@ We also assume that $C\cap P=\emptyset$, i.e. $C$ does not intersect any obstacl
 
 We will unite all triangles we find in the following manner. Start with any vertex on the (boundary of the) center, called $c_0$ that intersects the obstacles at obstacle point $p_0$, where $p_0$ is closest to $c_0$. $q_0=p_0$. The line $(c_0,p_0)$ shall not intersect $C$.
 
-$i$ will be the step counter and $c_i$ will always denote (boundary) center points and $p_i$ will be an obstacle point. $c_i$ does not need to be a $c^E\_j$, nor does $p_i$ need to be an $p^E_j$. $V(C)$ starts empty.
+$i$ will be the step counter and $c_i$ will always denote (boundary) center points and $p_i$ will be an obstacle point. $c_i$ does not need to be a $c^E\_j$, nor does $p_i$ need to be an $p^E_j$. $V'(C)$ starts empty.
 
 Generally speaking, we will rotate clockwise around obstacle points until we are blocked by an obstacle or the "end" of $C$. We will rotate counter-clockwise from such blocks or "end" until we hit a block or the other "end". We are then in the position of the outset, but we have moved overall to the left, i.e. counter-clockwise. We will have scanned the visible opening completely.
 
@@ -22,7 +22,7 @@ More formally, we start out in one of the positions listed in the following Comp
 
 One final note on the terms _right_ and _left_. They are meant regarding the direction of the rotation taking place. If speaking of the potential rotation point itself, the other potential rotation point is intended, i.e. only $c_i$ and $p_i$. In case of points in $(c_i,p_i)$, the points right regarding $p_i$ are left regarding $c_i$ and vice versa.
 
-We need to prove that the position listing is complete, the algorithm terminates, and that the union of all triangles is the entirety of $V(C)$.
+We need to prove that the position listing is complete, the algorithm terminates, and that the union of all triangles V'(C) is the entirety of $V(C)$.
 
 ## Completeness
 
@@ -75,6 +75,10 @@ All obstacles at $p_i$ are to the left of our current axis and we are at an oute
 
 ## Termination
 
-Starting at $c^E_0$ we look at the sum of the angles $(c^E_{k+1},c^E_k,p_i)$ and $(c^E_k,c^E_{k+1},p_i)$, where the vertices on $C$ are ordered $CCW$-wise and $c_i\in\[c^E_k,c^E_{k+1}\]$. Notice that this sum always decreases and both angles are non-negative. The former angle can become $0$, but then we immediately move to a next segment of the $C$-boundary. But any rotation that leaves the former angle positive, also leaves the latter positive, which means which means we always move to the next segment before we reach a negative angle.
+Starting at $c^E_0$ we look at the sum of the angles $(c^E_{k+1},c^E_k,p_i)$ and $(c^E_k,c^E_{k+1},p_i)$, where the vertices on $C$ are ordered $CCW$-wise and $c_i\in\[c^E_k,c^E_{k+1}\]$. Notice that this sum always decreases and both angles are non-negative. The former angle can become $0$, but then we immediately move to a next segment of the $C$-boundary. But any rotation that leaves the former angle positive, also leaves the latter positive, which means which means we always move to the next segment before we reach a negative angle. Since we only have a finite amount of vertices between $C$ and $P$, we must eventually reduce the sum to a non-postive angle or switch $C$-segments.
+
+Thus, we will eventually rotate around $C$ and again, since there are only a finite number of possible positions $(c_i,p_i)$, we will eventually reach a position that we have visited before. We then terminate. 
 
 ## Entirety
+
+Take any point $q\in V(C)$ and take a line-of-sight to $c$ on a boundary segment $(c^E_0,c^E_1)$. By definition, there is no obstacle $p$ on the line-of-sight, so we rotate $c$ in $CCW$ direction, until we either hit a outer left vertex $c^E_k$ of $C$ or some $p_k$ in $P$, which then has no other endpoint to the right. If we don't have $p_k$ yet, rotate around $c$ in $CW$ until we do.
