@@ -18,5 +18,23 @@ $i$ will be the step counter and $c_i$ will always denote (boundary) center poin
 
 Generally speaking, we will rotate clockwise around obstacle points until we are blocked by an obstacle or the "end" of $C$. We will rotate counter-clockwise from such blocks or "end" until we hit a block or the other "end". We are then in the position of the outset, but we have moved overall to the left, i.e. counter-clockwise. We will have scanned the visible opening completely.
 
-More formally, we start out in one of the positions (A)-(M). The images show abstract positions, where only the relation with respect to the grey line $\[c_i, q_i\]$ is important, not any concrete angles, but all depicted lines are actually (straight) lines. Also observe that in all situations, $p_i, p_{i+1}, q_i$ and $q_{i+1}$ may actually coincide.
+More formally, we start out in one of the positions (A)-(M). The images show abstract positions, where only the relation with respect to the grey line $\[c_i, q_i\]$ is important, not any concrete angles, but all depicted lines are actually (straight) lines. Also observe that most situations, $p_i, p_{i+1}, q_i$ and $q_{i+1}$ may actually coincide. This will be detailed later. We always add the trinagles that are bounded by the solid and dotted grey lines. Note that in a few rare cases, nothing is added, because we do not add triangles with area $0$. Any rotation stops in one of the positions and stops at the dotted line, when the (extended) line hits either a $c^E_j$ or a $p^E_j$. If a point indexed $i+1$ is not shown, this means, it coincides with that (of the same type) from step $i$. We alsways depict the closest points on the dotted line to the rotation point, not the point we actually stopped the rotation at.
 
+We need to prove that the position listing is complete, the algorithm terminates, and that the union of all triangles is the entirety of $V(C)$.
+
+## Completeness
+
+### A
+
+All obstacles at $p_i$ are to the "right" of our current axis and we are not at an outer right vertex $c_i$ as view from $p_i$. $q_i$ may coincide with $q_i$. Rotating $CW$, we encounter a closest outer right vertex from $C$ first.
+
+### B
+
+All obstacles at $p_i$ are to the "right" of our current axis and we are not at an outer right vertex $c_i$ as view from $p_i$. $q_i$ may coincide with $q_i$. Rotating $CW$, we encounter a closest left outer obstacle  from $P$ first.
+
+## Termination
+
+## Entirety
+
+
+## 
