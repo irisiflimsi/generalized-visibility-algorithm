@@ -73,12 +73,17 @@ All obstacles at $p_i$ are to the left of our current axis and we are at an oute
 ### J
 All obstacles at $p_i$ are to the left of our current axis and we are at an outer left vertex $c_i$ as viewed from $p_i$. Rotating $CCW$, the first obstacle $p_{i+1}$ encountered need not be connected to $p_i$. But we must encounter some line (sub)segment.
 
+### P
+At least one obstacle at $p_i$ has other endpoints to the left and the right of the current axis.
+
 ## Termination
 
-Starting at $c^E_0$ we look at the sum of the angles $(c^E_{k+1},c^E_k,p_i)$ and $(c^E_k,c^E_{k+1},p_i)$, where the vertices on $C$ are ordered $CCW$-wise and $c_i\in\[c^E_k,c^E_{k+1}\]$. Notice that this sum always decreases and both angles are non-negative. The former angle can become $0$, but then we immediately move to a next segment of the $C$-boundary. But any rotation that leaves the former angle positive, also leaves the latter positive, which means which means we always move to the next segment before we reach a negative angle. Since we only have a finite amount of vertices between $C$ and $P$, we must eventually reduce the sum to a non-postive angle or switch $C$-segments.
+Starting at $c^E_0$ we look at the sum of the angles $(c^E_{k+1},c^E_k,p_i)$ and $(c^E_k,c^E_{k+1},p_i)$, where the vertices on $C$ are ordered $CCW$-wise and $c_i\in\[c^E_k,c^E_{k+1}\]$. Notice that this sum always decreases and both angles are non-negative. The former angle can become $0$, but then we immediately move to a next segment of the $C$-boundary by (M). But any rotation that leaves the former angle positive, also leaves the latter positive, which means we always move to the next segment before we reach a negative angle. Since we only have a finite amount of vertices between $C$ and $P$, we must eventually reduce the sum far enough to be forced to switch $C$-segments.
 
 Thus, we will eventually rotate around $C$ and again, since there are only a finite number of possible positions $(c_i,p_i)$, we will eventually reach a position that we have visited before. We then terminate. 
 
 ## Entirety
 
-Take any point $q\in V(C)$ and take a line-of-sight to $c$ on a boundary segment $(c^E_0,c^E_1)$. By definition, there is no obstacle $p$ on the line-of-sight, so we rotate $c$ in $CCW$ direction, until we either hit a outer left vertex $c^E_k$ of $C$ or some $p_k$ in $P$, which then has no other endpoint to the right. If we don't have $p_k$ yet, rotate around $c$ in $CW$ until we do.
+Take any point $q\in V(C)$ and take a line-of-sight to $c$ on a boundary segment $(c^E_0,c^E_1)$. By definition, there is no obstacle $p$ on the line-of-sight, so we rotate $c$ in $CCW$ direction, until we either hit a outer left vertex $c^E_k$ of $C$ or some $p_k$ in $P$, which then has no other endpoint to the right. If we don't have $p_k$ with this non-right property yet, rotate around $c$ in $CW$ until we do.
+
+By nature of the algorithm, we will touch all obstacle points as we go around $C$. Not all obstacle points will be rotation points (or a $q$ for triangle completion). Assume that $p_k$ is a rotation point in the algorithm. Otherwise assume $p_k$ is not a rotation point.
