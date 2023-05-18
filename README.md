@@ -4,47 +4,19 @@ Some games consider visibility not just from a point source, which is the usual 
 
 # Formulation
 
-Let $({c^E\_i})\_{i=0..n}$ be a convex polygon $C$, the _center_. Let $({l\_i})\_{i=0..m}$ be a list of line segments called _obstacles_, where $l\_i=\[p^0\_i, p^1\_i\]$ for $i=0..m$. (This notation identifies the whole line segment, not just the end points.) Find the boundary of the visibility region $V(C)$, i.e. the set $\bigcup\lbrace(c\_i, x):\[c_i,x\]\cap({l\_j})\_{j=0..m}=\emptyset, i=0..n, x\in\mathbb{R}^2\rbrace$.
+Let $({c^E\_i})\_{i=0..n}$ be the vertices of a convex polygon $C$, the _center_. Let $({p^E\_i})\_{i=0..m}$ be the vertices of a linear graph $P$ of _obstacles_ in the plane. The individual obstacles are usually identified by the irreducible subgraphs of this graph. We also identify the graph with its "embedding" in the plane; all edges are straight lines. Find the boundary of the visibility region $V(C)$, i.e. the set $\bigcup\lbrace(c, x):\[c,x\]\cap P=\emptyset, c\in C, x\in\mathbb{R}^2\rbrace$.
 
-We make a further assumption that the $V(C)$ is bounded, i.e. the boundary will be a polygon. We also assume that the obstacles contain their intersections as points, i.e. we do not need to find these first: $l\_i\cap l\_j\subset\bigcup\lbrace(p^0_k,p^1_k : k=0..m)\rbrace$ for $i,j=0..m, i\neq j$.
+We make a further assumption that the $V(C)$ is bounded, i.e. the boundary will be a polygon. We also assume that the obstacles contain their intersections as points, i.e. any pairwise intersections of edges from $P$ is contained in the vertex set of $P$.
 
-We also assume that $C$ (as area) does not intersect any obstacles.
+We also assume that $C\cap P=\emptyset$, i.e. $C$ does not intersect any obstacles.
 
 # Algorithm
 
-We will unite all triangles we find in the following manner. Start with a point on the (boundary of the) center, called $c_0$ with smallest angle $0$ that intersects the obstacles at obstacle point $p_0$, where $p_0$ is closest to $c_0$.
+We will unite all triangles we find in the following manner. Start with any point on the (boundary of the) center, called $c_0$ that intersects the obstacles at obstacle point $p_0$, where $p_0$ is closest to $c_0$. $q_0=p_0$. The line $(c_0,p_0)$ shall not intersect $C$.
 
-$i$ will be the step counter and $c_i$ will always denote (boundary) center points and $p_i$ will be an obstacle point. $c_i$ does not need to be a $c^E\_j$, nor does $p_i$ need to be an $p^k_j$. $V(C)$ starts empty.
+$i$ will be the step counter and $c_i$ will always denote (boundary) center points and $p_i$ will be an obstacle point. $c_i$ does not need to be a $c^E\_j$, nor does $p_i$ need to be an $p^E_j$. $V(C)$ starts empty.
 
-Generally speaking, we will rotate clockwise ($-$) around obstacle points until we are blocked by an obstacle or the "end" of $C$. We will then routate counter-clockwise ($+$) from that block or "end" until we hit a block or the other "end". We are then in the position of the outset, but we have moved overall to the left, i.e. counter-clockwise. We will have scanned the visible opening completely.
+Generally speaking, we will rotate clockwise around obstacle points until we are blocked by an obstacle or the "end" of $C$. We will rotate counter-clockwise from such blocks or "end" until we hit a block or the other "end". We are then in the position of the outset, but we have moved overall to the left, i.e. counter-clockwise. We will have scanned the visible opening completely.
 
-More formally, assume we are at $c_i$ and $p_i$. $p_i$ is the closest obstacle point along the ray $\[c_i, p_i\]$. Assume all $p_k$ and $c^E_k$ points are ordered according to a rotation around $p_i$ starting with the axis through $c_i$. This is asymmetrical ordering, i.e. only angles in $\[0,\pi)$ are considered. We can also ignore all $p_k$, where $(p_k,$p_i\]\cap C\ne\emptyset$ and all $c_k$ where $(c_k,$p_i\]\cap C\ne\emptyset$ . We call this the $p_i$-ordering. We do the same with rotations around $c_i$, which we call the $c_i$-ordering.
-
-The "line of sight", which will pass through the points $c_i$ and $p_i$ will either be considered _left_ or _right_ of $p_i$, if $p_i$ is an endpoint. This will determine where we will rotate in the visible region. When at this position, we distinguish the following cases:
-
-### We are left. $p_i$ is a line segment endpoint $p^0_k$ or $p^1_k$ and all other endpoints of such lines have maximum angle less than 0 in $c_i$-ordering. There is a $c^E_k$ with negative angle in $p_i$ ordering.
-
-Call the maximum angle $\alpha$. We ($-$)-rotate around $p_i$, until we hit an obstacle vertex $p_k$ or a center vertex $c^E_k$, whichever we encounter first. We will have rotated at most $\alpha$. If we reached an obstacle vertex, we take the closest center point $c_{i+1}$ that lies on the line through $(p_i,p_k)$, otherwise we take $c_{i+1}=c^E_k$, which we encountered directly. We add the triangle $\[c_{i+1}, c_i, p_i\]$ to $V(C)$. It is easy to see that no obstacles can be in it.
-
-We take the point $q_i$, which is the closest obstacle along $(c_i,p_i)$ with a positive angle. This point need not be a $p^E$. We also take the point $q_{i+1}$, which is the closest obstacle along $(c_{i+1},p_i)$ with a negative angle. Note that $q_i$ and $q_{i+1}$ must be on a same line segment, because we have not encountered any other segment end during rotation. (Other line segements m start from these points, though.) We then add $\[p_i,q_i,q_{i+1}\]$ to $V(C)$.
-
-We already know $c_{i+1}$. As $p_{i+1}$ take the closest obstacle point to $c_{i+1}$ along the ray $(c_{i+1}, p_k)$.
-
-### We are left. $p_i$ is a line segment endpoint $p^0_k$ or $p^1_k$ and all other endpoints of such lines have maximum angle less than 0 in $c_i$-ordering. There is no $c^E_k$ with negative angle in $p_i$ ordering.
-
-We ($+$)-rotate around $c_i$, until we hit an obstacle vertex $p_k$ or a center vertex $c^E_k$, whichever we encounter first, call it $q$. We take the point $q_i$, which is the closest obstacle along $(c_i,p_i)$ with a positive angle. This point need not be a $p^E$. We also take the point $q_{i+1}$, which is the closest obstacle along $(c_i,q)$ with a negative angle. Note that $q_i$ and $q_{i+1}$ must be on a same line segment, because we have not encountered any other segment end during rotation. (Other line segements m start from these points, though.) We then add $\[c_i,q_i,q_{i+1}\]$ to $V(C)$.
-
-If $q$ is a $c^E$, let $c_{i+1}=q$ and $p_{i+1}=p_i$. If $q$ is an obstacle vertex, take $c_{i+1}=c_i$ and pick $p_{i+1}$ to be the closest obstacle point on the ray $(c_i,q)$.
-
-### We are left. $p_i$ is a line segment endpoint $p^0_k$ or $p^1_k$ and the maximum angle of all other endpoints of such lines is 0 in $c_i$-ordering.
-
-Take $c_{i+1}=c_i$ and $p_{i+1}$ the next closest $p^0_k$ or $p^1_k$ to $c_i$ on the ray $(c_i,p_i)$ that has a non-zero angle. Nothing is added to $V(C)$.
-
-### We are left. $p_i$ is a line segment endpoint $p^0_k$ or $p^1_k$ and at least one other endpoint has positive angle in $c_i$-ordering.
-
-Assume that all other endpoints have positive angle, Call the minimum angle $\alpha$. We ($+$)-rotate around $p_i$, until we hit an obstacle vertex $p_k$ or a center vertex $c^E_k$, whichever we encounter first. We will have rotated at most $\alpha$. If we reached an obstacle vertex, we take the closest center point $c_{i+1}$ that lies on the line through $(p_i,p_k)$, otherwise we take $c_{i+1}=c^E_k$, which we encountered directly. We add the triangle $\[c_{i+1}, c_i, p_i\]$ to $V(C)$. It is easy to see that no obstacles can be in it.
-
-If there are endpoints with 0 angle, pick $c_{i+1}=c_i$ and $p_{i+1}$ the next closest $p^0_k$ or $p^1_k$ to $c_i$ on the ray $(c_i,p_i)$ that has a non-zero angle. Nothing is added to $V(C)$.
-
-### $p_i$ is not a line segment endpoint $p^0_k$ or $p^1_k$.
+More formally, we start out in one of the positions (A)-(M). The images show abstract positions, where only the relation with respect to the grey line $\[c_i, q_i\]$ is important, not any concrete angles, but all depicted lines are actually (straight) lines. Also observe that in all situations, $p_i, p_{i+1}, q_i$ and $q_{i+1}$ may actually coincide.
 
