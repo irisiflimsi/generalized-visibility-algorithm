@@ -26,7 +26,9 @@ We need to prove that the position listing is complete, the algorithm terminates
 
 ## Completeness
 
-(A)-(E) describe all situations, where all obstacles ending at $p_i$ are to the right of our current axis and we are not at an outer right vertex $c_i$ as viewed from $p_i$. (F)-(H), (N), and (O) describe all situations, where some obstacles ending at $p_i$ are to the left of our current axis and we are not at an outer left vertex $c_i$ as viewed from $p_i$.
+(A)-(E) describe all situations, where all obstacles ending at $p_i$ are to the right of our current axis and we are not at an outer right vertex $c_i$ as viewed from $p_i$. (F)-(H), (N), and (O) describe all situations, where some obstacles ending at $p_i$ are to the left of our current axis and we are not at an outer left vertex $c_i$ as viewed from $p_i$. (K)-(M) describe all situations, where we are at an outer right vertex $c_i$ as viewed from $p_i$.
+
+Note that in all cases, where we rotate around $c_i$, $p_i$ will coincide with $q_i$. Only when we rotate around $p_i$ do we need to consider the "next" obstacle on the ray $(c_i,p_i)$.
 
 ### A
 All obstacles at $p_i$ are to the right of our current axis and we are not at an outer right vertex $c_i$ as viewed from $p_i$. Rotating $CW$, we first encounter a closest outer right vertex from $C$.
@@ -41,7 +43,7 @@ All obstacles at $p_i$ are to the right of our current axis and we are not at an
 All obstacles at $p_i$ are to the right of our current axis and we are not at an outer right vertex $c_i$ as viewed from $p_i$. Rotating $CW$, we first encounter an obstacle from $P$ not connected to $q_i$. This obstacle point $q$ lies strictly between $p_i$ and any point connected to $q_i$ but there are obstacle points connected to $q_i$ on the ray extending $(p_i, q)$. (Note that $q_{i+1}$ will never coincide with $p_i$, because we would have been in position (?) before.) $q_{i+1}$ will have all obstacle edges to the right of our new axis, because if there was one to the left, there are other points on that obstacle edge that would have been discovered first. (Note the various intersection conditions we have in place for $P$ and $C$.)
 
 ### D
-All obstacles at $p_i$ are to the right of our current axis and we are not at an outer right vertex $c_i$ as viewed from $p_i$. Rotating $CW$, we first encounter an obstacle from $P$ not connected to $q_i$. This obstacle point $q$ lies strictly beyond $p_i$ and there are no points connected to $q_i$ on the ray extending $(p_i, q)$. (Note that $q_{i+1}$ will never coincide with $p_i$, because we would have been in position (?) before.) We have not encountered a point between $p_i$ and $q$ but due to the boundedness of $V(C)$, we have encountered a line (sub)segment $(q', q'')$ which bounds our triangle.
+All obstacles at $p_i$ are to the right of our current axis and we are not at an outer right vertex $c_i$ as viewed from $p_i$. Rotating $CW$, we first encounter an obstacle from $P$ not connected to $q_i$. This obstacle point $q$ lies strictly beyond $p_i$ and there are no points connected to $q_i$ on the ray extending $(p_i, q)$. (Note that $q_{i+1}$ will never coincide with $p_i$, because we would have been in position (?) before.) We have not encountered a point between $p_i$ and $q$ but due to the boundedness of $V(C)$, we have encountered a line (sub)segment which bounds our triangle.
 
 ### F
 All obstacles at $p_i$ are to the left of our current axis and we are not at an outer left vertex $c_i$ as viewed from $p_i$. Rotating $CCW$, we first encounter a closest outer left vertex from $C$.
@@ -56,6 +58,16 @@ All obstacles at $p_i$ are to the left of our current axis and we are not at an 
 All obstacles at $p_i$ are to the left of our current axis and we are not at an outer left vertex $c_i$ as viewed from $p_i$. Rotating $CCW$, we first encounter an obstacle from $P$ not connected to $q_i$. This obstacle point $q$ lies strictly between $p_i$ and any point connected to $q_i$ but there are obstacle points connected to $q_i$ on the ray extending $(p_i, q)$. (Note that $q_{i+1}$ will never coincide with $p_i$, because we would have been in position (?) before.) $q_{i+1}$ will have all obstacle edges to the left of our new axis, because if there was one to the right, there are other points on that obstacle edge that would have been discovered first. (Note the various intersection conditions we have in place for $P$ and $C$.)
 
 ### O
+All obstacles at $p_i$ are to the left of our current axis and we are not at an outer left vertex $c_i$ as viewed from $p_i$. Rotating $CCW$, we first encounter an obstacle from $P$ not connected to $q_i$. This obstacle point $q$ lies strictly beyond $p_i$ and there are no points connected to $q_i$ on the ray extending $(p_i, q)$. (Note that $q_{i+1}$ will never coincide with $p_i$, because we would have been in position (?) before.) We have not encountered a point between $p_i$ and $q$ but due to the boundedness of $V(C)$, we have encountered a line (sub)segment which bounds our triangle.
+
+### K
+We are at an outer right vertex $c_i$ as viewed from $p_i$. Rotating $CCW$, we first encounter an obstacle from $P$ connected to $p_i$.
+
+### L
+We are at an outer right vertex $c_i$ as viewed from $p_i$. Rotating $CCW$, we first encounter an obstacle from $P$ not connected to $p_i$. This obstacle point $q$ lies strictly between $c_i$ and any point connected to $p_i$ but there are obstacle points connected to $p_i$ on the ray extending $(c_i, q)$. $p_{i+1}$ will have all obstacle edges to the left of our new axis, because if there was one to the right, there are other points on that obstacle edge that would have been discovered first. (Note the various intersection conditions we have in place for $P$ and $C$.)
+
+### M
+We are at an outer right vertex $c_i$ as viewed from $p_i$. Rotating $CCW$, we first encounter a vertex from $C$.
 
 ## Termination
 
