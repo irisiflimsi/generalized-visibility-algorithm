@@ -26,11 +26,19 @@ We need to prove that the position listing is complete, the algorithm terminates
 
 ### A
 
-All obstacles at $p_i$ are to the "right" of our current axis and we are not at an outer right vertex $c_i$ as view from $p_i$. $q_i$ may coincide with $q_i$. Rotating $CW$, we encounter a closest outer right vertex from $C$ first.
+All obstacles at $p_i$ are to the "right" of our current axis and we are not at an outer right vertex $c_i$ as view from $p_i$. $p_i$ may coincide with $q_i$. Rotating $CW$, we first encounter a closest outer right vertex from $C$.
 
 ### B
 
-All obstacles at $p_i$ are to the "right" of our current axis and we are not at an outer right vertex $c_i$ as view from $p_i$. $q_i$ may coincide with $q_i$. Rotating $CW$, we encounter a closest left outer obstacle  from $P$ first.
+All obstacles at $p_i$ are to the "right" of our current axis and we are not at an outer right vertex $c_i$ as view from $p_i$. Rotating $CW$, we first encounter an obstacle from $P$ connected to $q_i$. $p_i$ is allowed to coincide with $q_i$, but will not. This is trivial to prove.
+
+### C
+
+All obstacles at $p_i$ are to the "right" of our current axis and we are not at an outer right vertex $c_i$ as view from $p_i$. Rotating $CW$, we first encounter an obstacle from $P$ not connected to $q_i$. This obstacle point lies strictly between $p_i$ and any point connected to $q_i$ or is $p_i$ itself. $p_i$ is allowed to coincide with $q_i$, but will not. This is trivial to prove. $q_{i+1}$ will have all obstacle edges to the right of our new axis, because if there was one to the left, there are other points on that obstacle edge that would have been discovered first. (Note the various intersection conditions we have in pace for $P$ and $C$.)
+
+### D
+
+All obstacles at $p_i$ are to the "right" of our current axis and we are not at an outer right vertex $c_i$ as view from $p_i$. Rotating $CW$, we first encounter an obstacle from $P$ not connected to $q_i$. This obstacle point lies strictly between $p_i$ and $c_i$.
 
 ## Termination
 
