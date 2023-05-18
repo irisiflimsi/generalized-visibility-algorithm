@@ -75,6 +75,6 @@ All obstacles at $p_i$ are to the left of our current axis and we are at an oute
 
 ## Termination
 
-Starting at $c^E_0$ we look at the sum of the angles $(c^E_{k+1},c^E_k,p_i)$ and $(c^E_k,c^E_{k+1},p_i)$, where the vertices on $C$ are ordered $CCW$-wise and $c_i\in\[c^E_k,c^E_{k+1}\]$. Notice that this sum always decreases. We are dealing with a finate set of points, so either we eventually move with $c_{i+1}$ into another segment of $C$-boundary - for instance through (K) or (L) - or the sum becomes non-positive. It cannot become negative because that would violate the conditions we have laid out. If it becomes $0$, we are in position (M).
+Starting at $c^E_0$ we look at the sum of the angles $(c^E_{k+1},c^E_k,p_i)$ and $(c^E_k,c^E_{k+1},p_i)$, where the vertices on $C$ are ordered $CCW$-wise and $c_i\in\[c^E_k,c^E_{k+1}\]$. Notice that this sum always decreases and both angles are non-negative. The former angle can become $0$, but then we immediately move to a next segment of the $C$-boundary. But any rotation that leaves the former angle positive, also leaves the latter positive, which means which means we always move to the next segment before we reach a negative angle.
 
 ## Entirety
