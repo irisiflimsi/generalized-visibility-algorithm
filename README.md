@@ -26,7 +26,7 @@ We need to prove that the position listing is complete, the algorithm terminates
 
 ## Completeness
 
-(A)-(E) describe all situations, where all obstacles ending at $p_i$ are to the right of our current axis and we are not at an outer right vertex $c_i$ as viewed from $p_i$. (F)-(H), (N), and (O) describe all situations, where some obstacles ending at $p_i$ are to the left of our current axis and we are not at an outer left vertex $c_i$ as viewed from $p_i$. (K)-(M) describe all situations, where we are at an outer right vertex $c_i$ as viewed from $p_i$.
+(A)-(E) describe all situations, where all obstacles ending at $p_i$ are to the right of our current axis and we are not at an outer right vertex $c_i$ as viewed from $p_i$. (F)-(H), (N), and (O) describe all situations, where some obstacles ending at $p_i$ are to the left of our current axis and we are not at an outer left vertex $c_i$ as viewed from $p_i$. (K)-(M) describe all situations, where we are at an outer right vertex $c_i$ as viewed from $p_i$. (I), (J), and (M) describe all situations, where we are at an outer left vertex $c_i$ as viewed from $p_i$.
 
 Note that in all cases, where we rotate around $c_i$, $p_i$ will coincide with $q_i$. Only when we rotate around $p_i$ do we need to consider the "next" obstacle on the ray $(c_i,p_i)$.
 
@@ -68,6 +68,10 @@ We are at an outer right vertex $c_i$ as viewed from $p_i$. Rotating $CCW$, we f
 
 ### M
 We are at an outer right vertex $c_i$ as viewed from $p_i$. Rotating $CCW$, we first encounter a vertex from $C$.
+
+### I
+
+### J
 
 ## Termination
 
