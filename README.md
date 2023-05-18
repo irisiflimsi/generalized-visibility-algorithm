@@ -12,7 +12,7 @@ We also assume that $C\cap P=\emptyset$, i.e. $C$ does not intersect any obstacl
 
 # Algorithm
 
-We will unite all triangles we find in the following manner. Start with any point on the (boundary of the) center, called $c_0$ that intersects the obstacles at obstacle point $p_0$, where $p_0$ is closest to $c_0$. $q_0=p_0$. The line $(c_0,p_0)$ shall not intersect $C$.
+We will unite all triangles we find in the following manner. Start with any vertex on the (boundary of the) center, called $c_0$ that intersects the obstacles at obstacle point $p_0$, where $p_0$ is closest to $c_0$. $q_0=p_0$. The line $(c_0,p_0)$ shall not intersect $C$.
 
 $i$ will be the step counter and $c_i$ will always denote (boundary) center points and $p_i$ will be an obstacle point. $c_i$ does not need to be a $c^E\_j$, nor does $p_i$ need to be an $p^E_j$. $V(C)$ starts empty.
 
@@ -74,5 +74,7 @@ All obstacles at $p_i$ are to the left of our current axis and we are at an oute
 All obstacles at $p_i$ are to the left of our current axis and we are at an outer left vertex $c_i$ as viewed from $p_i$. Rotating $CCW$, the first obstacle $p_{i+1}$ encountered need not be connected to $p_i$. But we must encounter some line (sub)segment.
 
 ## Termination
+
+Starting at $c^E_0$ we look at the sum of the angles $(c^E_{k+1},c^E_k,p_i)$ and $(c^E_k,c^E_{k+1},p_i)$, where the vertices on $C$ are ordered $CCW$-wise and $c_i\in\[c^E_k,c^E_{k+1}\]$. Notice that this sum always decreases. We are dealing with a finate set of points, so either we eventually move with $c_{i+1}$ into another segment of $C$-boundary or the sum becomes non-positive.
 
 ## Entirety
