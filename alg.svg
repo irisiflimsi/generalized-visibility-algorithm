@@ -1,202 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
-<svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="120mm"
-   height="160mm"
-   viewBox="0 0 120 160"
-   version="1.1"
-   id="svg8"
-   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
-   sodipodi:docname="alg.svg">
-  <defs
-     id="defs2" />
-  <sodipodi:namedview
-     id="base"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:pageopacity="0.0"
-     inkscape:pageshadow="2"
-     inkscape:zoom="0.75892859"
-     inkscape:cx="314.6315"
-     inkscape:cy="399.52702"
-     inkscape:document-units="mm"
-     inkscape:current-layer="layer1"
-     showgrid="false"
-     inkscape:window-width="1920"
-     inkscape:window-height="1017"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
-     inkscape:window-maximized="1" />
-  <metadata
-     id="metadata5">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
-  <g
-     inkscape:label="Ebene 1"
-     inkscape:groupmode="layer"
-     id="layer1">
-    <g
-       id="g1224"
-       transform="translate(0,-130)">
-      <path
-         style="fill:none;stroke:#888888;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-         d="M 30,260 80,160"
-         id="path815-9-3-1-0-1"
-         inkscape:connector-curvature="0" />
-      <path
-         style="fill:none;stroke:#888888;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="M 55,260 V 180"
-         id="path815-9-3-1-5"
-         inkscape:connector-curvature="0" />
-      <circle
-         r="1"
-         cy="210"
-         cx="55"
-         id="path844-58"
-         style="fill:#000000;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path815-9-4-8"
-         d="M 55,180 80,160"
-         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <circle
-         r="1"
-         cy="160"
-         cx="80"
-         id="path844-3-9-4"
-         style="fill:#000000;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path815-9-3-4"
-         d="M 30,260 H 55"
-         style="fill:none;stroke:#888888;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <circle
-         r="1"
-         cy="260"
-         cx="30"
-         id="path844-2-0-3"
-         style="fill:#000000;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <circle
-         style="fill:#000000;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         id="path844-5-5-3"
-         cx="55"
-         cy="260"
-         r="1" />
-      <text
-         id="text1076"
-         y="160"
-         x="10"
-         style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-         xml:space="preserve"><tspan
-           style="stroke-width:0.26458332"
-           y="160"
-           x="10"
-           id="tspan1074"
-           sodipodi:role="line">(A)</tspan></text>
-      <text
-         id="text1080-2"
-         y="217.48561"
-         x="56.58934"
-         style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-         xml:space="preserve"><tspan
-           style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Italic';stroke-width:0.26458332"
-           y="217.48561"
-           x="56.58934"
-           id="tspan1078-2"
-           sodipodi:role="line">p<tspan
-   id="tspan1118-4"
-   style="font-size:6.87916613px;baseline-shift:sub;stroke-width:0.26458332" /></tspan></text>
-      <text
-         id="text1080-1-5"
-         y="270"
-         x="55"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-         xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke-width:0.26458332"
-           y="270"
-           x="55"
-           id="tspan1078-7-5"
-           sodipodi:role="line">c'</tspan></text>
-      <text
-         id="text1080-1-7-6"
-         y="270"
-         x="30"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-         xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke-width:0.26458332"
-           y="270"
-           x="30"
-           id="tspan1078-7-3-7"
-           sodipodi:role="line">c</tspan></text>
-      <circle
-         r="1"
-         cy="180"
-         cx="55"
-         id="path844-3-3-0"
-         style="fill:#000000;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <text
-         id="text1080-11-1-9"
-         y="175"
-         x="50"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-         xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke-width:0.26458332"
-           y="175"
-           x="50"
-           id="tspan1078-71-5-0"
-           sodipodi:role="line">q<tspan
-   id="tspan1118-8-2-1"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;baseline-shift:sub;text-anchor:middle;stroke-width:0.26458332" /></tspan></text>
-      <text
-         id="text1080-11-1-0-1"
-         y="155"
-         x="75"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-         xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke-width:0.26458332"
-           y="155"
-           x="75"
-           id="tspan1078-71-5-7-7"
-           sodipodi:role="line">q'<tspan
-   id="tspan1118-8-2-8-1"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;baseline-shift:sub;text-anchor:middle;stroke-width:0.26458332" /></tspan></text>
-      <path
-         inkscape:connector-curvature="0"
-         id="path815-9-3-4-5"
-         d="M 55,260 H 80"
-         style="fill:none;stroke:#888888;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2.00000006, 1.00000003;stroke-dashoffset:0;stroke-opacity:1" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path815-9-3-4-5-8"
-         d="M 10,260 H 30"
-         style="fill:none;stroke:#888888;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2.00000008, 1.00000004;stroke-dashoffset:0;stroke-opacity:1" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path815-9-4-8-6"
-         d="M 55,180 30,200"
-         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2.00000006, 1.00000003;stroke-dashoffset:0;stroke-opacity:1" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path815-9-4-8-6-9"
-         d="m 80,160 25,-20"
-         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2.00000008, 1.00000004;stroke-dashoffset:0;stroke-opacity:1" />
-    </g>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="60mm" height="80mm" viewBox="0 0 60 80" version="1.1">
+<g transform="scale(.5) translate(0,-130)">
+  <path style="stroke:#888;stroke-width:1;" d="M 30,260 80,160" />
+  <path style="stroke:#888;stroke-width:1;" d="M 55,260 55,180" />
+  <path style="stroke:#000;stroke-width:1;" d="M 55,180 80,160" />
+  <path style="stroke:#888;stroke-width:1;" d="M 30,260 55,260" />
+  <path style="stroke:#888;stroke-width:1;stroke-dasharray:2,1;" d="M 55,260 80,260" />
+  <path style="stroke:#888;stroke-width:1;stroke-dasharray:2,1;" d="M 10,260 30,260" />
+  <path style="stroke:#000;stroke-width:1;stroke-dasharray:2,1;" d="M 55,180 30,200" />
+  <path style="stroke:#000;stroke-width:1;stroke-dasharray:2,1;" d="M 80,160 105,140" />
+  <circle style="fill:#000;stroke:#000;stroke-width:1;stroke-opacity:1" r="1" cy="210" cx="55" />
+  <circle style="fill:#000;stroke:#000;stroke-width:1;stroke-opacity:1" r="1" cy="160" cx="80" />
+  <circle style="fill:#000;stroke:#000;stroke-width:1;stroke-opacity:1" r="1" cy="260" cx="30" />
+  <circle style="fill:#000;stroke:#000;stroke-width:1;stroke-opacity:1" r="1" cy="260" cx="55" />
+  <circle style="fill:#000;stroke:#000;stroke-width:1;stroke-opacity:1" r="1" cy="180" cx="55" />
+  <text style="font-size:12;font-family:sans-serif;text-align:center;text-anchor:middle;" y="160" x="15">(A)</text>
+  <text style="font-size:10;font-family:sans-serif;text-align:center;text-anchor:middle;" y="215" x="60">p</text>
+  <text style="font-size:10;font-family:sans-serif;text-align:center;text-anchor:middle;" y="270" x="55">c'</text>
+  <text style="font-size:10;font-family:sans-serif;text-align:center;text-anchor:middle;" y="270" x="30">c</text>
+  <text style="font-size:10;font-family:sans-serif;text-align:center;text-anchor:middle;" y="175" x="50">q</text>
+  <text style="font-size:10;font-family:sans-serif;text-align:center;text-anchor:middle;" y="155" x="75">q'</text>
+</g>
 </svg>
