@@ -15,9 +15,9 @@
   <circle style="fill:#000;stroke:#000;stroke-width:1;stroke-opacity:1" r="1" cy="260" cx="55" />
   <circle style="fill:#000;stroke:#000;stroke-width:1;stroke-opacity:1" r="1" cy="180" cx="55" />
   <text style="font-size:12;font-family:sans-serif;text-align:center;text-anchor:middle;" y="160" x="15">(A)</text>
-  <text style="font-size:10;font-family:sans-serif;text-align:center;text-anchor:middle;" y="215" x="60">p</text>
-  <text style="font-size:10;font-family:sans-serif;text-align:center;text-anchor:middle;" y="270" x="55">c'</text>
-  <text style="font-size:10;font-family:sans-serif;text-align:center;text-anchor:middle;" y="270" x="30">c</text>
+  <text style="font-size:10;font-family:sans-serif;text-align:center;text-anchor:middle;" y="215" x="65">p</text>
+  <text style="font-size:10;font-family:sans-serif;text-align:center;text-anchor:middle;" y="275" x="55">c'</text>
+  <text style="font-size:10;font-family:sans-serif;text-align:center;text-anchor:middle;" y="275" x="30">c</text>
   <text style="font-size:10;font-family:sans-serif;text-align:center;text-anchor:middle;" y="175" x="50">q</text>
   <text style="font-size:10;font-family:sans-serif;text-align:center;text-anchor:middle;" y="155" x="75">q'</text>
 </g>
