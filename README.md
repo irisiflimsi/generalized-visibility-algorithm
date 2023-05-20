@@ -18,6 +18,6 @@ We need to prove that the algorithm terminates and $V'(C)=V(C)$.
 
 The set $M = (c^E\_i)\_{i=0..n}\cup(p^E\_i)\_{i=0..m}$ is finite, therefore the set of intersection points $I_C(M)$ of the complete graph on $M$ is also finite. $V_n\subset I_C(M)$ for all $n$. Since the $V_n$ are pairwise disjoint, we conclude that at some point, all $V_n$ will be empty. (The runtime asympotics are much better than this simple proof suggests.)
 
-Obviously, $V'(C)\subset V(C)$. Take any $p\in V(C)$ and let the enpoint of its line of sight be $c$.
+Obviously, $V'(C)\subset V(C)$. Take any $p\in V(C)$ and let the endpoint of one of its line-of-sight be $c$. Now rotate around $p$ and follow $c$ as it moves along the boundary of $C$. If we encounter a $c\in\bigcup V_n$ before we encounter an obstacle in either direction, we know, that $c\in V'(C)$. So assume that we encounter some obstacles $p_l, p_r$ first 
 
 
